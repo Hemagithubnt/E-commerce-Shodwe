@@ -13,9 +13,6 @@ these code top: 100% tells the place of this div below the parents button learn 
   top: 100%;
 }
 
-/* .nav li .submenu Button:hover{
-  color: coral;
-} */
 
 .nav li .submenu li .submenu_2 {
   visibility: hidden;
@@ -25,6 +22,3 @@ these code top: 100% tells the place of this div below the parents button learn 
   visibility: inherit ;
  
 }
-/* .nav li .submenu li:hover .submenu_2 Button:hover{
-  color: coral ;
-} */

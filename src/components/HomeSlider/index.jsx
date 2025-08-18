@@ -4,17 +4,21 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 // import required modules
-import { Navigation } from "swiper/modules";
+import { Navigation,Autoplay } from "swiper/modules";
 
 function HomeSlider() {
   return (
     <div className="homeSlider p-3">
-      <div className="container  ">
+      <div className="container ">
         <Swiper
           navigation={true}
-          modules={[Navigation]}
+          modules={[Navigation,Autoplay]}
           className="sliderHome rounded-3xl"
           spaceBetween={10}
+           autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         >
           <SwiperSlide>
             <img src="banner-1.1.jpg" alt="first" className="rounded-3xl " />
