@@ -12,7 +12,7 @@ function Navigation() {
 
   return (
     <>
-      <nav>
+      <nav className="navbar">
         <div className="container flex justify-end items-center gap-3 py-4">
           
           {/* Left side: SHOP BY CATEGORIES */}

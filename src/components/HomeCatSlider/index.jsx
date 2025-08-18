@@ -22,13 +22,14 @@ export default function HomeCatSlider() {
         modules={[Navigation]}
         className="mySwiper"
       >
+      
         <SwiperSlide>
           <Link to="/">
-            <div className="item p-3 bg-white text-center flex flex-col items-center">
+            <div className="item p-3 bg-white text-center flex flex-col items-center rounded-3xl">
               <img
                 src="Features HomeCatSlider.png"
                 alt="dress"
-                className="w-[60px] transition-all "
+                className="w-[60px] transition-all  "
               />
               <h3 className="text-center text-[14px] mt-3 font-[500]">
                 Fashion
@@ -38,7 +39,7 @@ export default function HomeCatSlider() {
         </SwiperSlide>
          <SwiperSlide>
           <Link to="/">
-            <div className="item p-3 bg-white text-center flex flex-col items-center">
+            <div className="item p-3 bg-white text-center flex flex-col items-center rounded-3xl">
               <img
                 src="electronics.png"
                 alt="electronics"
@@ -52,7 +53,7 @@ export default function HomeCatSlider() {
         </SwiperSlide>
          <SwiperSlide>
           <Link to="/">
-            <div className="item p-3 bg-white text-center flex flex-col items-center">
+            <div className="item p-3 bg-white text-center flex flex-col items-center rounded-3xl">
               <img
                 src="bags img.png"
                 alt="bags"
@@ -66,7 +67,7 @@ export default function HomeCatSlider() {
         </SwiperSlide>
          <SwiperSlide>
           <Link to="/">
-            <div className="item p-3 bg-white text-center flex flex-col items-center">
+            <div className="item p-3 bg-white text-center flex flex-col items-center rounded-3xl">
               <img
                 src="Footwear.png"
                 alt="Footwear"
@@ -80,7 +81,7 @@ export default function HomeCatSlider() {
         </SwiperSlide>
          <SwiperSlide>
           <Link to="/">
-            <div className="item p-3 bg-white text-center flex flex-col items-center">
+            <div className="item p-3 bg-white text-center flex flex-col items-center rounded-3xl">
               <img
                 src="Groceries.png"
                 alt="Groceries"
@@ -94,7 +95,7 @@ export default function HomeCatSlider() {
         </SwiperSlide>
          <SwiperSlide>
           <Link to="/">
-            <div className="item p-3 bg-white text-center flex flex-col items-center">
+            <div className="item p-3 bg-white text-center flex flex-col items-center rounded-3xl">
               <img
                 src="Beauty img.png"
                 alt="Beauty"
@@ -108,7 +109,7 @@ export default function HomeCatSlider() {
         </SwiperSlide>
          <SwiperSlide>
           <Link to="/">
-            <div className="item p-3 bg-white text-center flex flex-col items-center">
+            <div className="item p-3 bg-white text-center flex flex-col items-center rounded-3xl">
               <img
                 src="wellness.png"
                 alt="wellness"
@@ -122,7 +123,7 @@ export default function HomeCatSlider() {
         </SwiperSlide>
          <SwiperSlide>
           <Link to="/">
-            <div className="item p-3 bg-white text-center flex flex-col items-center">
+            <div className="item p-3 bg-white text-center flex flex-col items-center rounded-3xl">
               <img
                 src="jewellery.png"
                 alt="jewellery"
@@ -136,7 +137,7 @@ export default function HomeCatSlider() {
         </SwiperSlide>
          <SwiperSlide>
           <Link to="/">
-            <div className="item p-3 bg-white text-center flex flex-col items-center">
+            <div className="item p-3 bg-white text-center flex flex-col items-center rounded-3xl">
               <img
                 src="Features HomeCatSlider.png"
                 alt="tablet"
@@ -150,7 +151,7 @@ export default function HomeCatSlider() {
         </SwiperSlide>
          <SwiperSlide>
           <Link to="/">
-            <div className="item p-3 bg-white text-center flex flex-col items-center">
+            <div className="item p-3 bg-white text-center flex flex-col items-center rounded-3xl">
               <img
                 src="Features HomeCatSlider.png"
                 alt="tablet"
@@ -164,7 +165,7 @@ export default function HomeCatSlider() {
         </SwiperSlide>
          <SwiperSlide>
           <Link to="/">
-            <div className="item p-3 bg-white text-center flex flex-col items-center">
+            <div className="item p-3 bg-white text-center flex flex-col items-center rounded-3xl">
               <img
                 src="Features HomeCatSlider.png"
                 alt="tablet"
@@ -178,7 +179,7 @@ export default function HomeCatSlider() {
         </SwiperSlide>
          <SwiperSlide>
           <Link to="/">
-            <div className="item p-3 bg-white text-center flex flex-col items-center">
+            <div className="item p-3 bg-white text-center flex flex-col items-center rounded-3xl">
               <img
                 src="Features HomeCatSlider.png"
                 alt="tablet"
@@ -192,7 +193,7 @@ export default function HomeCatSlider() {
         </SwiperSlide>
          <SwiperSlide>
           <Link to="/">
-            <div className="item p-3 bg-white text-center flex flex-col items-center">
+            <div className="item p-3 bg-white text-center flex flex-col items-center rounded-3xl">
               <img
                 src="Features HomeCatSlider.png"
                 alt="tablet"
@@ -206,7 +207,7 @@ export default function HomeCatSlider() {
         </SwiperSlide>
          <SwiperSlide>
           <Link to="/">
-            <div className="item p-3 bg-white text-center flex flex-col items-center">
+            <div className="item p-3 bg-white text-center flex flex-col items-center rounded-3xl">
               <img
                 src="Features HomeCatSlider.png"
                 alt="tablet"
@@ -218,6 +219,7 @@ export default function HomeCatSlider() {
             </div>
           </Link>
         </SwiperSlide>
+     
        
       </Swiper>
       </div>
