@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  background-color: #f5f0f0;
+  color: rgba(0, 0, 0, 0.7);
+  overflow-x: hidden;
+}
+
+/* Override Swiper default overflow */
+.swiper {
+  overflow: visible !important;
+}
+
+
+.container{
+  width: 95%;
+  margin: 0 auto;
+}
+
+
+
+.link:hover {
+  color:#ff5252;
+}
+
+.MuiBadge-badge{
+  background-color: #ff5252 !important;
+  
+}
+nav ul button{text-transform: capitalize !important;}
+
+/* ye hamare swiper ke uper lage button ki style ko define kiya gya hai  */
+.swiper-button-next, .swiper-button-prev {
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background-color: #fff;
+  border-radius: 100%;
+  box-shadow: 0 2px 4px #0000001f, 0 2px 4px #0000001f !important;
+}
+  .swiper-button-next:after, .swiper-button-prev:after {
+  color: #000;
+  font-size: 20px !important;
+}
