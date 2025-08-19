@@ -8,7 +8,7 @@ import BannerBox from "../BannerBox/Index";
 
 export default function AdsBannerSlider({ items }) {
   return (
-    <div className="AdsBanner py-5 w-full">
+    <div className="AdsBanner py-3 w-full">
       <Swiper
         slidesPerView={items}
         spaceBetween={15}

@@ -97,13 +97,19 @@ after ka matlab hai button ke andr ka teer  */
 }
 /* ------------------------------------------------------------------------------------------------------------------------- */
 
+/* yha pr hum Tabs ko styling de rhe hai jo hamane banaya hai populer products ke samne samajhe dekh lo  */
 .Mui-selected{
   color: #ff5252 !important;
   
 }
+
 .css-1qltlow-MuiTabs-indicator {
-  background-color:#ff5252 !important ;
+  background-color:#ff5252 !important;
 }
+/* ------------------------------------------------------------------------------------------------------------------------------ */
+/* ab ye style jo hai vo ProductSlider ke sabhi element ke liye hai    */
+.ProductsSlider .swiper-wrapper{padding: 15px; margin-left: -15px; margin-right: -15px;}
+
 
 
 
