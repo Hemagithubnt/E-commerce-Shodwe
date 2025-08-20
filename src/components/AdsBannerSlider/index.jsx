@@ -12,6 +12,7 @@ export default function AdsBannerSlider({ items }) {
       <Swiper
         slidesPerView={items}
         spaceBetween={15}
+        loop={true}
         navigation={true}
         modules={[Navigation]}
         className="container"

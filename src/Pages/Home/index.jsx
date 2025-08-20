@@ -7,6 +7,19 @@ import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import { useState } from "react";
 import ProductsSlider from "../../components/ProductsSlider/Index";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+
+import "swiper/css/navigation";
+
+// import required modules
+import { Navigation } from "swiper/modules";
+import BlogItem from "../../components/BlogItems";
+import Footer from "../../components/Footer";
 
 function Home() {
   const [value, setValue] = useState(0);
@@ -77,24 +90,54 @@ function Home() {
         </div>
         <br></br> <br></br>
         <AdsBannerSlider items={4} />
-       </section>
+      </section>
 
       <section className="py-3 bg-white  ">
         <div className="container">
-         <h2 className="text-[20px] font-[600] pb-5 ">Latest Products</h2>
-         <ProductsSlider items="6"/>
-         <AdsBannerSlider items={4} />
-       </div>
-         <section className="py-3 bg-white  ">
-        <div className="container">
-         <h2 className="text-[20px] font-[600] pb-5 ">Features Products</h2>
-         <ProductsSlider items="6"/>
-         <AdsBannerSlider items={3} />
-       </div>
+          <h2 className="text-[20px] font-[600] pb-5 ">Latest Products</h2>
+          <ProductsSlider items="6" />
+          <AdsBannerSlider items={4} />
+        </div>
+        <section className="py-3 bg-white  ">
+          <div className="container">
+            <h2 className="text-[20px] font-[600] pb-5 ">Features Products</h2>
+            <ProductsSlider items="6" />
+            <AdsBannerSlider items={3} />
+          </div>
+        </section>
       </section>
+
+      <section className="py-3 bg-white blogSection  ">
+        <div className=" py-5 container">
+          <h2 className="text-[20px] font-[600] pb-5 ">From The Blog</h2>
+          <Swiper
+            slidesPerView={4}
+            spaceBetween={10}
+            navigation={true}
+            modules={[Navigation]}
+            className="mySwiper"
+          >
+            <SwiperSlide>
+              <BlogItem />
+            </SwiperSlide>
+            <SwiperSlide>
+              <BlogItem />
+            </SwiperSlide>
+            <SwiperSlide>
+              <BlogItem />
+            </SwiperSlide>
+            <SwiperSlide>
+              <BlogItem />
+            </SwiperSlide>
+            <SwiperSlide>
+              <BlogItem />
+            </SwiperSlide>
+          </Swiper>
+        </div>
       </section>
-      <br></br>
-      <br></br>
+      <Footer/>
+      
+     
     </>
   );
 }

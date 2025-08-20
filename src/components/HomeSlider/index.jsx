@@ -12,6 +12,7 @@ function HomeSlider() {
       <div className="container ">
         <Swiper
           navigation={true}
+           loop={true}
           modules={[Navigation,Autoplay]}
           className="sliderHome rounded-3xl"
           spaceBetween={10}

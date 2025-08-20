@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-
 body {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
@@ -110,6 +109,8 @@ after ka matlab hai button ke andr ka teer  */
 /* ab ye style jo hai vo ProductSlider ke sabhi element ke liye hai    */
 .ProductsSlider .swiper-wrapper{padding: 15px; margin-left: -15px; margin-right: -15px;}
 
+/* --------------------------------------------------------------------------------------------------------------------------*/
 
+.MuiSvgIcon-root{color:#ff5252 !important}
 
 

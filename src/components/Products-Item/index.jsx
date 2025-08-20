@@ -6,21 +6,21 @@ import { LuGitCompareArrows } from "react-icons/lu";
 import { FaRegHeart } from "react-icons/fa";
 import Tooltip from '@mui/material/Tooltip';
 
-export default function ProductsItem() {
+export default function ProductsItem(props) {
   return (
     <div className="ProductItem shadow-lg rounded-md overflow-hidden border-1 border-[rgba(0,0,0,0.1)] group">
       <div className="imgWrapper w-[100%] rounded-md h-[200px] overflow-hidden relative">
+
 {/* here we use 2 photoes in one frame where i use relative and absolute position now we can stay 2 photos in 1 div or frame  */}
+
         <Link to="/">
         <div className="img h-[200px] overflow-hidden relative">
         <img
-          src="A-line Kurti.jpg"
-          alt="a-line kurti"
+          src={props.img1}
           className="w-full rounded-md"
         />
           <img
-          src="https://api.spicezgold.com/download/file_1734529297930_fiorra-women-s-teapot-blue-pure-cotton-a-line-kurta-with-sharara-and-dupatta-product-images-rvo9n8udfg-1-202307260626.jpg"
-          alt="a-line kurti"
+          src={props.img2}
           className="w-full rounded-md transition-all duration-700 absolute top-0 left-0 opacity-0 hover:opacity-100 hover:scale-110 "
         />
         </div>
@@ -33,7 +33,7 @@ export default function ProductsItem() {
           className="discount flex items-center absolute top-[10px] left-[10px] z-50
                 bg-red-600 text-white rounded-lg p-[2px] text-[12px] font-[500]"
         >
-          10%
+          {props.discount}
         </span>
         <div className="actions absolute top-[-200px] right-[5px] z-50 flex items-center gap-1 flex-col w-[50px]
         transition-all duration-300 group-hover:top-[15px]">
@@ -62,20 +62,20 @@ export default function ProductsItem() {
       <div className="info p-3 bg-[#f1f1f1]">
         <h6 className="text-[14px]">
           <Link to="/" className="link">
-            Soylent Green
+            {props.brand}
           </Link>
         </h6>
         <h3 className="text-[14px] title mt-1 mb-3 font-[500] text-[#000]">
           <Link to="/" className="link">
-            A-Line Kurti With Sharara & Dupatta
+           {props.item}
           </Link>
         </h3>
-        <Rating name="size-small" defaultValue={2} size="small" readOnly />
+        <Rating name="size-small" defaultValue={props.value} size="small" readOnly />
           <div className="flex items-center gap-4 ml-2  ">
         <span className="oldPrice line-through text-gray-600 font-[600]">
-          $58.00
+          {props.money}
         </span>
-        <span className="NewPrice text-red-500 font-bold">$58.00</span>
+        <span className="NewPrice text-red-500 font-bold">{props.discount_money}</span>
       </div>
       </div>
     
