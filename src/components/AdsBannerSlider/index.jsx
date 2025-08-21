@@ -8,14 +8,14 @@ import BannerBox from "../BannerBox/Index";
 
 export default function AdsBannerSlider({ items }) {
   return (
-    <div className="AdsBanner py-3 w-full">
+    <div className="AdsBanner py-3 w-full container">
       <Swiper
         slidesPerView={items}
         spaceBetween={15}
         loop={true}
         navigation={true}
         modules={[Navigation]}
-        className="container"
+        className="AddsBanner"
       >
         <SwiperSlide>
           <BannerBox img={"AddsBanner-1.jpg"} />

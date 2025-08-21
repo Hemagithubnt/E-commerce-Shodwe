@@ -87,12 +87,12 @@ after ka matlab hai button ke andr ka teer  */
 
 .homeCatSlider .item:hover img{transform: scale(1.1);}
 
-.AdsBanner .swiper-button-prev, .AdsBanner .swiper-button-next{
-  width:20px; height: 20px; min-width: 20px;
+.AdsBanner .swiper-button-prev,.AdsBanner .swiper-button-next{
+  width:35px; height: 35px; min-width: 35px;
 }
 
 .AdsBanner .swiper-button-prev:after,.AdsBanner .swiper-button-next:after{
-  font-size: 10px !important;
+  font-size: 20px !important;
 }
 /* ------------------------------------------------------------------------------------------------------------------------- */
 
@@ -112,5 +112,47 @@ after ka matlab hai button ke andr ka teer  */
 /* --------------------------------------------------------------------------------------------------------------------------*/
 
 .MuiSvgIcon-root{color:#ff5252 !important}
+/* ---------------------------------------------------------------------------------------------------------------------------- */
+/* ye jo hamara HomeSliderV2 vala slider ke andr jo button hai uska color change kiya hai with the help of customization */
 
+.swiper-pagination-bullet-active{background-color: #ff5252 !important;}
+/* --------------------------------------------------------------------------------------------------------------------------------- */
+
+.primary{
+  background-color: #ff5252;
+}
+.btn{
+  background-color: #ff5252 !important;
+  color: white !important;
+}
+/* -------------------------------------------------------------------------------------------------------------------------------------- */
+/* dekho jo hamare pas HomeSliderV2 vala component jo hai uske andr .swiper-slide-active ye class jo hai mene Swiper-Effect Fade 
+ki class hai pahale se isko liya hai or iske andr ye jo hamari sare headings likhi hai button bagera inke div ki classhai
+jiska name hai .info iske andr ye changes kr rhe hai Animation ke liye ye class jab bhi hum swipper ki direction ya jab 1 image 
+se dusre image me ja rhe hote hai uss samay hamare jo headings and button kese animate krege isko hi control krna hai  */
+.HomeSliderV2 .swiper-slide-active .info{
+  right: 0px !important;
+  opacity: 1;
+}
+.HomeSliderV2 .swiper-slide-active .info h4{
+  right: 0px !important;
+  opacity: 1;
+}
+.HomeSliderV2 .swiper-slide-active .info h3{
+  right: 0px !important;
+  opacity: 1;
+}
+.HomeSliderV2 .swiper-slide-active .info h2{
+  right: 0px !important;
+  opacity: 1;
+}
+
+.HomeSliderV2 .swiper-slide-active .btn_{
+  bottom: 0px !important;
+  opacity: 1;
+}
+.HomeSliderV2 .info h4{transition: 1.2s;}
+.HomeSliderV2 .info h3{transition: 1.5s;}
+.HomeSliderV2 .info h2{transition: 1.8s;}
+.HomeSliderV2 .info .btn_{transition: 2s;}
 

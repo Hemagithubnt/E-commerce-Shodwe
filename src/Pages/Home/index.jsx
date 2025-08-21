@@ -20,6 +20,9 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import BlogItem from "../../components/BlogItems";
 import Footer from "../../components/Footer";
+import HomeSliderV2 from "../../components/HomeSliderV-2";
+import BannerBoxV2 from "../../components/BannerBoxV2/Index";
+import AdsBannerSliderV2 from "../../components/AdsBannerSliderV2";
 
 function Home() {
   const [value, setValue] = useState(0);
@@ -30,6 +33,20 @@ function Home() {
   return (
     <>
       <HomeSlider />
+      <section className="py-6">
+        <div className="container flex gap-5">
+          <div className="part-1 w-[70%]">
+            <HomeSliderV2/>
+          </div>
+          <div className="part-2 w-[30%] flex gap-5 justify-between flex-col items-center">
+            <BannerBoxV2 info="left" title="Samsung Gear VR Camera" money="$120.00" img="https://demos.codezeel.com/prestashop/PRS21/PRS210502/img/cms/sub-banner-1.jpg" link="/"/>
+            <BannerBoxV2  info="right" title="Marcel Dining Room Chair" money="$130.00" img="https://demos.codezeel.com/prestashop/PRS21/PRS210502/img/cms/sub-banner-2.jpg" link="/"/>
+          </div>
+
+        </div>
+      </section>
+
+      
       <HomeCatSlider />
       <section className="bg-white py-10">
         <div className="container">
@@ -55,7 +72,7 @@ function Home() {
                   sx={{ width: "100%" }}
                 >
                   <Tab label="Fashion" />
-                  <Tab label="Electronics" />
+                  <Tab label="Electronics"/>
                   <Tab label="Bags" />
                   <Tab label="Footwear" />
                   <Tab label="Groceries" />
@@ -89,7 +106,8 @@ function Home() {
           </div>
         </div>
         <br></br> <br></br>
-        <AdsBannerSlider items={4} />
+       
+        <AdsBannerSliderV2 items={4}/>
       </section>
 
       <section className="py-3 bg-white  ">
@@ -135,10 +153,7 @@ function Home() {
           </Swiper>
         </div>
       </section>
-      <Footer/>
-      
-     
-    </>
+      </>
   );
 }
 
