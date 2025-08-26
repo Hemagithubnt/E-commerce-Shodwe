@@ -19,10 +19,10 @@ import "swiper/css/navigation";
 // import required modules
 import { Navigation } from "swiper/modules";
 import BlogItem from "../../components/BlogItems";
-import Footer from "../../components/Footer";
 import HomeSliderV2 from "../../components/HomeSliderV-2";
 import BannerBoxV2 from "../../components/BannerBoxV2/Index";
 import AdsBannerSliderV2 from "../../components/AdsBannerSliderV2";
+import Like from "../../components/Like button";
 
 function Home() {
   const [value, setValue] = useState(0);
@@ -153,6 +153,7 @@ function Home() {
           </Swiper>
         </div>
       </section>
+      <Like/>
       </>
   );
 }

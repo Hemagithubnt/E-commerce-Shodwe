@@ -8,6 +8,7 @@ body {
   overflow-x: hidden;
 }
 
+
 /* ----------------------------------------------------------------------------------------------------------------------- */
 /* 
 yha hum apne scrollbar ko styling jo pure page ko uper and neeche krne ka option deta hai iske liye hum default scrollbar ke uper 
@@ -111,7 +112,7 @@ after ka matlab hai button ke andr ka teer  */
 
 /* --------------------------------------------------------------------------------------------------------------------------*/
 
-.MuiSvgIcon-root{color:#ff5252 !important}
+.css-vuhw6e-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root.Mui-checked{color:#ff5252 !important;}
 /* ---------------------------------------------------------------------------------------------------------------------------- */
 /* ye jo hamara HomeSliderV2 vala slider ke andr jo button hai uska color change kiya hai with the help of customization */
 

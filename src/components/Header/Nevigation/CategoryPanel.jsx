@@ -1,15 +1,59 @@
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
-import Button from "@mui/material/Button";
-import { FaRegSquarePlus } from "react-icons/fa6";
 import "../Nevigation/style.css"; // Import the CSS file for styles
-import { Link } from "react-router-dom"; // ✅ instead of @mui/material/Link
-import { useState } from "react";
-import { PiMinusSquare } from "react-icons/pi";
-
+import CategoryCollapse from "../../CategoryCollapse/CategoryCollapse";
 function CategoryPanel({ open, onClose }) {
-  const [openFashion, setNewFashion] = useState(false);
-  const [openApparel, setNewApparel] = useState(false);
+    const categories = [
+    {
+      name: "Fashion",
+      items: [
+        {
+          name: "Apparel",
+          subItems: ["Crepe T-shirt", "Leather watch", "Rolling Diamond", "Smart Tablet"]
+        },
+        {
+          name: "Accessories",
+          subItems: ["Bags", "Jewelry", "Belts", "Sunglasses"]
+        }
+      ]
+    },
+    {
+      name: "Electronics",
+      items: [
+        {
+          name: "Mobile",
+          subItems: ["Smartphones", "Cases", "Chargers", "Headphones"]
+        },
+        {
+          name: "Laptops",
+          subItems: ["Gaming", "Business", "Ultrabooks", "Accessories"]
+        }
+      ]
+    },
+    {
+      name: "Home & Garden",
+      items: [
+        {
+          name: "Furniture",
+          subItems: ["Chairs", "Tables", "Sofas", "Storage"]
+        },
+        {
+          name: "Kitchen",
+          subItems: ["Appliances", "Cookware", "Utensils", "Storage"]
+        }
+      ]
+    },
+    {
+      name: "Sports",
+      items: [
+        {
+          name: "Fitness",
+          subItems: ["Weights", "Cardio", "Yoga", "Accessories"]
+        }
+      ]
+    }
+  ];
+
 
   const DrawerList = (
     <Box sx={{ width: 250 }} role="presentation" className="category_panal">
@@ -25,90 +69,15 @@ function CategoryPanel({ open, onClose }) {
           ✖
         </span>
       </h3>
-      <div className="scroll">
-        <ul className="w-full">
-          <li className="list-none flex items-center relative">
-            <Link to="/" className="w-full">
-              <Button className="w-full !justify-start !text-left px-3 !text-[rgba(0,0,0,.8)]">
-                Fashion
-              </Button>
-            </Link>
-            {openFashion ? (
-              <PiMinusSquare
-                className="absolute top-[10px] right-[15px] cursor-pointer"
-                onClick={() => setNewFashion(false)}
-              />):(
-            <FaRegSquarePlus
-              className="absolute top-[10px] right-[15px] cursor-pointer"
-              onClick={() => setNewFashion(true)}
-            />)}
-            {openFashion && (
-              <ul className="submenu absolute top-[100%] left-[0%] w-full pl-3">
-                <li className="list-none flex items-center relative">
-                  <Link to="/" className="w-full">
-                    <Button className="w-full !justify-start !text-left px-3 !text-[rgba(0,0,0,.8)]">
-                      Apparel
-                    </Button>
-                  </Link>
-                  {openApparel ? (
-                    <PiMinusSquare
-                      className="absolute top-[10px] right-[15px] cursor-pointer"
-                      onClick={() => setNewApparel(false)}
-                    />
-                  ) : (
-                  <FaRegSquarePlus
-                    className="absolute top-[10px] right-[15px] cursor-pointer"
-                    onClick={() => {
-                      setNewApparel(!openApparel);
-                    }}
-                  />)}
-
-
-                  {openApparel && (
-                    <ul className="inner_submenu absolute top-[100%] left-[0%] w-full pl-3 ">
-                      <li className="list-none relative mb-1">
-                        <Link
-                          to="/"
-                          className="link w-full !justify-start !text-left !px-3 cursor-pointer 
-                   transition text-[13px] "
-                        >
-                          Crepe T-shirt
-                        </Link>
-                      </li>
-                      <li className="list-none relative mb-1">
-                        <Link
-                          to="/"
-                          className="link w-full !justify-start !text-left !px-3 cursor-pointer 
-                   transition text-[13px] "
-                        >
-                          Leather watch
-                        </Link>
-                      </li>
-                      <li className="list-none relative mb-1">
-                        <Link
-                          to="/"
-                          className="link w-full !justify-start !text-left !px-3 cursor-pointer 
-                   transition text-[13px] "
-                        >
-                          Rolling Diamond
-                        </Link>
-                      </li>
-                      <li className="list-none mb-1">
-                        <Link
-                          to="/"
-                          className="w-full justify-start text-left px-3 cursor-pointer transition link text-[13px]"
-                        >
-                          Smart Tablet
-                        </Link>
-                      </li>
-                    </ul>
-                  )}
-                </li>
-              </ul>
-            )}
-          </li>
-        </ul>
-      </div>
+     <div className="space-y-1">
+          {categories.map((category, index) => (
+            <CategoryCollapse
+              key={index}
+              categoryName={category.name}
+              items={category.items}
+            />
+          ))}
+        </div>
     </Box>
   );
 

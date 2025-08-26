@@ -1,7 +1,9 @@
-import Sidebar from "../../components/Sidebar";
+
 
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import Link from "@mui/material/Link";
+import Sidebar from "../../components/Sidebar/Sidebar";
+
 
 const ProductListing = () => {
   return (
@@ -20,7 +22,7 @@ const ProductListing = () => {
       <div className="bg-white p-2 mt-4">
       <div className="container flex gap-3">
         <div className="sidebarWrapper w-[20%] h-full bg-white">
-          <Sidebar />
+         <Sidebar/>
         </div>
       </div>
       </div>
