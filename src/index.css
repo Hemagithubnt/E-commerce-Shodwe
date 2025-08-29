@@ -4,7 +4,7 @@ body {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   background-color: #f5f0f0;
-  color: rgba(0, 0, 0, 0.7);
+  color: rgba(36,36,36,.8);
   overflow-x: hidden;
 }
 
@@ -118,9 +118,11 @@ after ka matlab hai button ke andr ka teer  */
 
 .swiper-pagination-bullet-active{background-color: #ff5252 !important;}
 /* --------------------------------------------------------------------------------------------------------------------------------- */
-
 .primary{
-  background-color: #ff5252;
+  color: #ff5252;
+}
+.primary:hover{
+  background-color: #000 !important;
 }
 .btn{
   background-color: #ff5252 !important;
@@ -156,4 +158,46 @@ se dusre image me ja rhe hote hai uss samay hamare jo headings and button kese a
 .HomeSliderV2 .info h3{transition: 1.5s;}
 .HomeSliderV2 .info h2{transition: 1.8s;}
 .HomeSliderV2 .info .btn_{transition: 2s;}
-
+/* -------------------------------------------------------------------------------------------------------------------------- */
+/* yha hum productListing page pr 80% vale section me jo uper 2 button diye hai unke svg(ya figure ka ) color change 
+karege jab usko click kiya jaye yani usko click kiya jaye to uska color change hoke red ho jaye matlab active 
+class apna work krne lagegi  */
+.ItemViewActions button.active svg{color:#ff5252 !important; opacity: 1;}
+/* --------------------------------------------------------------------------------------------------------------------- */
+/* yha hum productListing Page ke sabse neeche jo Pagination lagaya hai uska color and backgroundcolor change krege */
+.Mui-selected.MuiPaginationItem-page{background-color: #ff5252 !important; color: #fff !important;}
+/* ----------------------------------------------------------------------------------------------------------------------- */
+/* yha hum jo ProductZoom ke liye jo SwiperSlider bna rhe hai uske har image ke size ko maintai yha krege dekhte  */
+.ProductZoomSwiperSlider .swiper-slide{
+  height: auto !important;
+}
+.ProductZoomSwiperSlider .swiper-button-next{bottom: 0px !important; right: inherit !important; top: inherit !important;
+   width: 100% !important; height: 30px !important; border-radius: 0px !important;
+}
+.ProductZoomSwiperSlider .swiper-button-prev{top: 20px !important; left: 0 !important; width: 100% !important;
+  height: 30px !important; border-radius: 0px !important;
+}
+.ProductZoomSwiperSlider .swiper-button-next:after ,.ProductZoomSwiperSlider .swiper-button-prev:after{
+  transform: rotate(90deg);
+}
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+/* yha hum ProductDetails vale page pr size ke age vale L S X XL etc ke button ke charo or border banayege dekhte rho  */
+.ProductContent .actions button {
+  min-width: 40px !important;
+  border: 1px solid rgba(0,0,0,.1) !important;
+  height: 30px;
+}
+/* ---------------------------------------------------------------------------------------------------------------------------- */
+/* ye jo styling hai vo arrow ko remove inputbox me se number input me jo automatically aa jate hai vo styling hai 
+isko mene internet se liya hai  */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+/* yha hum Review scrollbar ko styling denge samajhe guru  */
+.reviewScroll::-webkit-scrollbar-thumb{background-color: #ccc !important;}
+.reviewScroll::-webkit-scrollbar{width: 5px !important;}

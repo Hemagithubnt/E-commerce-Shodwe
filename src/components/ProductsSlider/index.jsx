@@ -14,8 +14,8 @@ import ProductsItem from "../Products-Item";
 export default function ProductsSlider(props){
     return(
         <section className="ProductsSlider bg-white">
-            <div className="container ">
-                 <Swiper
+          <div className="container ">
+          <Swiper
           slidesPerView={props.items}
           spaceBetween={10}
           navigation={true}
@@ -24,7 +24,7 @@ export default function ProductsSlider(props){
           className="mySwiper"
         >
           <SwiperSlide>
-            <ProductsItem img1="Chikankari Woven kurta.png" img2="https://api.spicezgold.com/download/file_1734529363003_gosriki-women-s-pink-ethnic-motifs-printed-kurta-with-trouser-dupatta-product-images-rvpkyh5qdr-1-202310141511.jpg"
+            <ProductsItem img1="https://api.spicezgold.com/download/file_1734529362999_gosriki-women-s-pink-ethnic-motifs-printed-kurta-with-trouser-dupatta-product-images-rvpkyh5qdr-0-202310141511.webp" img2="https://api.spicezgold.com/download/file_1734529363003_gosriki-women-s-pink-ethnic-motifs-printed-kurta-with-trouser-dupatta-product-images-rvpkyh5qdr-1-202310141511.jpg"
              discount="15%" brand="House of Chikankari" item="Chikankari Woven Kurta" money="1200rs" discount_money="1000rs" value="5"/>
           </SwiperSlide>
           <SwiperSlide>

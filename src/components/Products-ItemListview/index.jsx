@@ -5,12 +5,13 @@ import Button from "@mui/material/Button";
 import { LuGitCompareArrows } from "react-icons/lu";
 import { FaRegHeart } from "react-icons/fa";
 import Tooltip from '@mui/material/Tooltip';
+import { IoCartOutline } from "react-icons/io5";
 
-
-export default function ProductsItem(props) {
+export default function ProductsItemListView(props) {
   return (
-    <div className="ProductItem shadow-lg rounded-md overflow-hidden border-1 border-[rgba(0,0,0,0.1)] group">
-      <div className="imgWrapper w-[100%] rounded-md h-[200px] overflow-hidden relative">
+    <div className="ProductItem shadow-lg rounded-md overflow-hidden border-1 
+    border-[rgba(0,0,0,0.1)] group flex items-center ">
+      <div className="imgWrapper w-[25%] rounded-md h-[200px] overflow-hidden relative">
 
 {/* here we use 2 photoes in one frame where i use relative and absolute position now we can stay 2 photos in 1 div or frame  */}
 
@@ -60,17 +61,18 @@ export default function ProductsItem(props) {
         </div>
 {/* ------------------------------------------------------------------------------------------------------------------------- */}
       </div>
-      <div className="info p-3 bg-[#f1f1f1]">
-        <h6 className="text-[14px]">
+      <div className="info p-3 py-5 px-8 w-[75%]">
+        <h6 className="text-[16px]">
           <Link to="/" className="link">
             {props.brand}
           </Link>
         </h6>
-        <h3 className="text-[14px] title mt-1 mb-3 font-[500] text-[#000]">
+        <h3 className="text-[18px] title mt-1 mb-3 font-[500] text-[#000]">
           <Link to="/" className="link">
            {props.item}
           </Link>
         </h3>
+        <p className="mb-3 text-[14px]">{props.para}</p>
         <Rating name="size-small" defaultValue={props.value} size="small" readOnly />
           <div className="flex items-center gap-4 ml-2  ">
         <span className="oldPrice line-through text-gray-600 font-[600]">
@@ -78,6 +80,10 @@ export default function ProductsItem(props) {
         </span>
         <span className="NewPrice text-red-500 font-bold">{props.discount_money}</span>
       </div>
+      <div className="mt-3">
+      <Button className="primary btn flex gap-2"><IoCartOutline className="text-[20px]"/>Add to Cart</Button>
+      </div>
+
       </div>
     
     </div>
