@@ -6,8 +6,12 @@ import { LuGitCompareArrows } from "react-icons/lu";
 import { FaRegHeart } from "react-icons/fa";
 import Tooltip from '@mui/material/Tooltip';
 import { IoCartOutline } from "react-icons/io5";
+import { MyContext } from "../../App";
+import { useContext } from "react";
+ 
 
 export default function ProductsItemListView(props) {
+   const context = useContext(MyContext);
   return (
     <div className="ProductItem shadow-lg rounded-md overflow-hidden border-1 
     border-[rgba(0,0,0,0.1)] group flex items-center ">
@@ -54,7 +58,8 @@ export default function ProductsItemListView(props) {
           </Link>
           <Link to="/">
           <Tooltip title="Zoom">
-            <Button className="!w-[30px] !h-[30px] !min-w-[30px] !rounded-full text-black !bg-white hover:!bg-red-500 transition-all duration-300">
+            <Button className="!w-[30px] !h-[30px] !min-w-[30px] !rounded-full text-black !bg-white hover:!bg-red-500 transition-all duration-300"
+             onClick={() => context.setOpenProductDetailsModal(true)}>
               <MdZoomOutMap className="text-[18px] text-black hover:text-white transition-all duration-300" />
             </Button></Tooltip>
           </Link>

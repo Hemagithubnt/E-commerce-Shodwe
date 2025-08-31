@@ -153,7 +153,6 @@ function Home() {
           </Swiper>
         </div>
       </section>
-      <Like/>
       </>
   );
 }

@@ -43,7 +43,7 @@ function Navigation() {
               </li>
 
               <li className="list-none relative">
-                <Link to="/" className="text-[14px] font-[500] link transition">
+                <Link to="/ProductListing" className="text-[14px] font-[500] link transition">
                   <Button
                     color="inherit"
                     className="link transition !font-[500] !text-[rgba(0, 0, 0, 0.8)] hover:!text-[#ff5252]"

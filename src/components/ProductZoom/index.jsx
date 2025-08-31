@@ -23,7 +23,7 @@ export default function ProductZoom() {
 
   return (
     <>
-      <div className="flex gap-3 items-start h-[380px]">
+      <div className="flex gap-3 items-start h-[500px]">
         <div className="slider w-[15%] h-[57%] overflow-hidden">
           <Swiper
             direction={"vertical"}
@@ -74,7 +74,7 @@ export default function ProductZoom() {
         </div>
         
 
-<div className="zoomContainer w-[85%] flex h-full items-center justify-center overflow-hidden rounded-md">
+<div className="zoomContainer w-[85%] flex h-[80%] items-center justify-center overflow-hidden rounded-md">
            <Swiper
             ref={zoomSliderBig}
             slidesPerView={1}
@@ -87,7 +87,7 @@ export default function ProductZoom() {
               zoomType="hover"
               zoomScale={1}
               src="https://api.spicezgold.com/download/file_1734529362999_gosriki-women-s-pink-ethnic-motifs-printed-kurta-with-trouser-dupatta-product-images-rvpkyh5qdr-0-202310141511.webp"
-              className="w-full h-full object-contain  rounded-xl"
+              className="w-full h-[100%] object-contain  rounded-xl"
                 />
          </SwiperSlide>
           <SwiperSlide>
@@ -95,7 +95,7 @@ export default function ProductZoom() {
               zoomType="hover"
               zoomScale={1}
               src="https://api.spicezgold.com/download/file_1734529363003_gosriki-women-s-pink-ethnic-motifs-printed-kurta-with-trouser-dupatta-product-images-rvpkyh5qdr-1-202310141511.jpg"
-              className="w-full h-full object-contain  rounded-xl"
+              className="w-full h-[100%] object-contain  rounded-xl"
                 />
          </SwiperSlide>
          <SwiperSlide>
@@ -103,7 +103,7 @@ export default function ProductZoom() {
               zoomType="hover"
               zoomScale={1}
               src="https://api.spicezgold.com/download/file_1734529363005_gosriki-women-s-pink-ethnic-motifs-printed-kurta-with-trouser-dupatta-product-images-rvpkyh5qdr-2-202310141511.jpg"
-              className="w-full h-full object-contain  rounded-xl"
+              className="w-full h-[100%] object-contain  rounded-xl"
                 />
          </SwiperSlide>
            <SwiperSlide>
@@ -111,14 +111,11 @@ export default function ProductZoom() {
               zoomType="hover"
               zoomScale={1}
               src="https://api.spicezgold.com/download/file_1734529363005_gosriki-women-s-pink-ethnic-motifs-printed-kurta-with-trouser-dupatta-product-images-rvpkyh5qdr-2-202310141511.jpg"
-              className="w-full h-full object-contain  rounded-xl"
+              className="w-full h-[100%] object-contain  rounded-xl"
                 />
          </SwiperSlide>
-
-          </Swiper>
-         
-           
-          </div>
+       </Swiper>
+        </div>
         </div>
    
     </>

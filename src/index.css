@@ -3,7 +3,7 @@
 body {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
-  background-color: #f5f0f0;
+  background-color: #e6dddd;
   color: rgba(36,36,36,.8);
   overflow-x: hidden;
 }
@@ -128,6 +128,7 @@ after ka matlab hai button ke andr ka teer  */
   background-color: #ff5252 !important;
   color: white !important;
 }
+.btn-lg{font-size: 18px; padding: 10px 20px !important;}
 /* -------------------------------------------------------------------------------------------------------------------------------------- */
 /* dekho jo hamare pas HomeSliderV2 vala component jo hai uske andr .swiper-slide-active ye class jo hai mene Swiper-Effect Fade 
 ki class hai pahale se isko liya hai or iske andr ye jo hamari sare headings likhi hai button bagera inke div ki classhai
@@ -201,3 +202,6 @@ input[type=number]::-webkit-outer-spin-button {
 /* yha hum Review scrollbar ko styling denge samajhe guru  */
 .reviewScroll::-webkit-scrollbar-thumb{background-color: #ccc !important;}
 .reviewScroll::-webkit-scrollbar{width: 5px !important;}
+/* ------------------------------------------------------------------------------------------------------------------------------------------ */
+/* dialogContent ke andr padding 0px kr diya hai taki jo image hai vo pura dialogContent ke andar aa jaye */
+.productDetailsDialog .MuiDialogContent-root{padding: 0px !important;}
