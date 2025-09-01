@@ -14,29 +14,36 @@ import ProductZoom from "./components/ProductZoom";
 import { Button } from "@mui/material";
 import { IoCloseSharp } from "react-icons/io5";
 import ProductDetailsRight from "./components/ProductDetailsDialog";
+import CartPage from "./Pages/Cart";
 
-const MyContext = createContext();
+
+
+ const MyContext = createContext();
 
 function App() {
   const [openProductDetailsModal, setOpenProductDetailsModal] = useState(false);
   const [maxWidth] = useState("lg");
   const [fullWidth] = useState(true);
+  const [openCartPanel, setOpenCartPanel] = useState(true);
 
   const handleCloseProductDetailsModal = () => {
     setOpenProductDetailsModal(false);
   };
+  const toggleCartPanel = (newOpen) => () => {
+    setOpenCartPanel(newOpen);
+  };
 
-  return (                                                                                                                                                        
+  return (
     <>
       <BrowserRouter>
-        <MyContext.Provider
-          value={{ name: "John", age: 30, setOpenProductDetailsModal }}
-        >
+    <MyContext.Provider value={{setOpenProductDetailsModal, setOpenCartPanel, openCartPanel, toggleCartPanel}}>
           <Header />
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
+            <Route path="/" exact={true} element={<Home />} />
+            <Route path="/login" exact={true} element={<Login />} />
+            <Route path="/register" exact={true} element={<Register />} />
+            <Route path="/cart" exact={true} element={<CartPage />} />
+            
             <Route
               path="/ProductListing"
               exact={true}
@@ -47,6 +54,7 @@ function App() {
               exact={true}
               element={<ProductDetails />}
             />
+           
           </Routes>
           <Footer />
         </MyContext.Provider>
@@ -80,6 +88,8 @@ function App() {
           </div>
         </DialogContent>
       </Dialog>
+
+    
     </>
   );
 }

@@ -47,7 +47,7 @@ export default function Login() {
             </div>
             <p className="text-[14px] text-center mt-5">Not Registered? <Link className="link text-[14px] font-[600] text-red-400" to="/register">Sign Up</Link></p>
             <p className="text-center mt-3">Or continue with social account</p>
-            <Button className="flex gap-3 w-full !bg-[#dacece] btn-lg !text-black"><FcGoogle/> Login with Google</Button>
+            <Button className="flex gap-3 w-full !mt-3 !bg-[#dacece] btn-lg !text-black"><FcGoogle/> Login with Google</Button>
           </form>
         </div>
       </div>

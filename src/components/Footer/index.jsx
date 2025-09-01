@@ -13,8 +13,15 @@ import { FaPinterestP } from "react-icons/fa";
 import { RiTwitterXFill } from "react-icons/ri";
 import { FaInstagram } from "react-icons/fa";
 
+import Drawer from "@mui/material/Drawer";
+import CartPanel from "../cartPanelApp.jsx";
+import { Button } from "@mui/material";
+import { IoCloseSharp } from "react-icons/io5";
+import { useContext } from "react";
+import { MyContext } from "../../App";
 
 export default function Footer() {
+  const context = useContext(MyContext);
   return (
     <>
     <footer className="foot py-6 bg-[#fafafa] border-t-[1px] border-gray-300">
@@ -157,6 +164,32 @@ export default function Footer() {
 
         </div>
     </div>
+
+      {/* cart Pannel */}
+      <Drawer
+        open={context.openCartPanel}
+        onClose={context.toggleCartPanel(false)}
+        anchor="right"
+        className="cartPanel"
+        PaperProps={{
+          className: "w-[400px]",
+        }}
+      >
+        <div className="flex items-center justify-between py-3 px-4 gap-3 border-b-[1px] border-gray-300">
+          <h4>Shopping cart(1)</h4>
+          <Button className="!w-[40px] !h-[40px] !min-w-[40px] !rounded-full !text-[#000]">
+            <IoCloseSharp
+              className="text-[20px] cursor-pointer "
+              onClick={context.toggleCartPanel(false)}
+            />
+          </Button>
+        </div>
+
+      
+        {/* cart item ko hum iss component se le lenge samajhe guru */}
+
+        <CartPanel/>
+      </Drawer>
   
     </>
 

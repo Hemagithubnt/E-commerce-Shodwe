@@ -8,7 +8,13 @@ import { LuGitCompareArrows } from "react-icons/lu";
 import { FaRegHeart } from "react-icons/fa";
 import Tooltip from '@mui/material/Tooltip';
 import Navigation from "./Nevigation";
+import { useContext } from "react";
+import { MyContext } from "../../App";
+ 
 
+
+function Header() {
+    const context = useContext(MyContext);
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   "& .MuiBadge-badge": {
@@ -19,7 +25,6 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
   },
 }));
 
-function Header() {
   return (
     <header className="bg-white">
       <div className="top-strip py-1 border-t-[1px] border-gray-300 border-b-[1px] ">
@@ -83,7 +88,7 @@ function Header() {
               </li>
               <li>
                  <Tooltip title="Compare" placement="top">
-                <IconButton aria-label="cart">
+                <IconButton aria-label="cart" >
                   <StyledBadge badgeContent={4} color="secondary">
                     <LuGitCompareArrows />
                   </StyledBadge>
@@ -101,7 +106,7 @@ function Header() {
               </li>
               <li>
                  <Tooltip title="cart" placement="top">
-                <IconButton aria-label="cart">
+                <IconButton aria-label="cart" onClick={()=> context.setOpenCartPanel(true)}>
                   <StyledBadge badgeContent={4} color="secondary">
                     <IoMdCart />
                   </StyledBadge>

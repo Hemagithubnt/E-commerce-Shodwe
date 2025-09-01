@@ -75,11 +75,7 @@ export default function ProductsSlider(props){
                 </Link>
           </SwiperSlide>
           </Swiper>
-
-             
-
-            </div>
-
-        </section>
+        </div>
+ </section>
     )
 }
